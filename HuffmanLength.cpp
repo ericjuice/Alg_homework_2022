@@ -8,7 +8,7 @@ void main(){
 	cin>>n;
 	priority_queue <int,vector<int>,greater<int> > leaves;
 	priority_queue <int,vector<int>,greater<int> > leaves_2;
-	priority_queue<int,vector<int>,greater<int> > nodes;//´æ·ÇÒ¶½ÚµãÈ¨ÖØ
+	priority_queue<int,vector<int>,greater<int> > nodes;//å­˜éå¶èŠ‚ç‚¹æƒé‡
 	int a;
 	for(int i=0;i<n;i++){
 		cin>>a;
@@ -20,10 +20,10 @@ void main(){
 		leaves.pop();
 		temp+=leaves.top();
 		leaves.pop();
-		leaves.push(temp);//Ò¶×Ó½ÚµãÈÚºÏÁ©×îĞ¡µÄ
-		nodes.push(temp);//nodes¼ÓÉÏÕâ¸ö·ÇÒ¶½Úµã
+		leaves.push(temp);//å¶å­èŠ‚ç‚¹èåˆä¿©æœ€å°çš„
+		nodes.push(temp);//nodesåŠ ä¸Šè¿™ä¸ªéå¶èŠ‚ç‚¹
 	}
-	int sum1=0,sum2=0;//Ò¶×Ó/·ÇÒ¶È¨ÖØºÍ
+	int sum1=0,sum2=0;//å¶å­/éå¶æƒé‡å’Œ
 	for(int i=0;i<n;i++){
 		sum1+=leaves_2.top();
 		leaves_2.pop();
@@ -33,6 +33,6 @@ void main(){
 		nodes.pop();
 	}
 	cout.setf(ios::fixed);
-	//ÀûÓÃ¹æÂÉ£ºÆ½¾ù±àÂë³¤¶È=·ÇÒ¶È¨ÖØºÍ/Ò¶×ÓÈ¨ÖØºÍ
+	//åˆ©ç”¨è§„å¾‹ï¼šå¹³å‡ç¼–ç é•¿åº¦=éå¶æƒé‡å’Œ/å¶å­æƒé‡å’Œ
 	cout<<setprecision(2)<<(float)sum2/sum1;
 }
