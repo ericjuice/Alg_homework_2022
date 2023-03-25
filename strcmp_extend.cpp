@@ -30,6 +30,5 @@ int main(void)
 		f[1][0]=k*(i+1);
 	}
 	cout << f[0][len_b] << endl;
-
 	return 0;
 }
